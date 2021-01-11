@@ -50,6 +50,7 @@ const App = () => {
             }
             const cek = await loginLoket(datas)
             if (cek === 1) {
+                console.log("HELLO WORLD")
                 browserHistory.push('/dashboard')
                 const savedDatas = JSON.parse(localStorage.getItem('isLogin'))
                 console.log(savedDatas)

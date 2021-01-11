@@ -102,7 +102,7 @@ export async function login(datas) {
 }
 
 export async function loginLoket(datas) {
-    console.log("6789")
+    console.log("loket")
     let status = 0
     await axios
     .post(`${endpoint}/loginloket`,{

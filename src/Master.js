@@ -76,7 +76,7 @@ export default function Master(props) {
             <Layout style={{ height: '100%' }}>
                 <Sider trigger={null} collapsible collapsed={collapsed} style={{ backgroundColor: 'white' }}>
                     <div className="logo" style={{ fontSize: 18, fontWeight: 'bold', textAlign: 'center' }}>e-superdina</div>
-                    {dataUsers.akses === 'admin' && (
+                 
                         <Menu mode="inline" defaultSelectedKeys={['1']}>
                             <Menu.Item key="1" onClick={() => browserHistory.push('/dashboard')} >
                                 <DashboardTwoTone twoToneColor="#eb2f96" />
@@ -118,9 +118,6 @@ export default function Master(props) {
                             </SubMenu>
                         </Menu>
                     )
-                    }
-
-
 
                 </Sider>
                 <Layout className="site-layout">
