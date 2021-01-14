@@ -125,6 +125,13 @@ function PermohonanNew() {
         setListPermohonan(data)
     }
 
+    const getTrackingyId = async (id) => {
+        const url = 'gettrackingbyid'
+        let track= await getbyid(id, url)
+        console.log(track)
+       
+    }
+
     const create = async () => {
         if (nik === '' || id_permohonan === '') {
             notification.open({
@@ -202,7 +209,7 @@ function PermohonanNew() {
             key: 'action',
             render: (text, record) => (
                 <span>
-                    <Button key="edit" style={{ marginLeft: 10 }} type="primary" icon={<InfoCircleOutlined />} >Track</Button>
+                    <Button key="edit" style={{ marginLeft: 10 }} onClick={() => getTrackingyId(record.id_berkas)} type="primary" icon={<InfoCircleOutlined />} >Track</Button>
                     <Popconfirm
                         title="Anda yakin menghapus Data ini?"
                         //onConfirm={() => removepagawai(record.id)}
